@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <title>noise</title>
+    <script defer src="app.js"></script>
+  </head>
+
+  <body>
+    <section>
+      <div class="item" id="rainy-btn">
+        <img src="./assets/icons/cloud-rain.svg" alt="rainy" />
+      </div>
+
+      <div class="item" id="summer-btn">
+        <img src="./assets/icons/sun.svg" alt="summer" />
+      </div>
+
+      <div class="item" id="winter-btn">
+        <img src="./assets/icons/cloud-snow.svg" alt="winter" />
+      </div>
+    </section>
+
+    <div class="volume">
+      <input
+        type="range"
+        id="volume"
+        name="volume"
+        min="0"
+        max="1"
+        step="0.1"
+      />
+      <label for="volume"></label>
+    </div>
+
+    <audio id="rainy-audio">
+      <source src="./assets/sounds/rain.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="summer-audio">
+      <source src="./assets/sounds/summer.mp3" type="audio/mpeg" />
+    </audio>
+
+    <audio id="winter-audio">
+      <source src="./assets/sounds/winter.mp3" type="audio/mpeg" />
+    </audio>
+  </body>
+  <style>
+    body {
+      background-image: url("assets/rainy-bg.jpg");
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .volume {
+        margin-top: 2%;
+        margin-left: 4%;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      margin-left: 50px;
+      padding: 10px 10px;
+      border: solid 1px white;
+      border-radius: 5px;
+    }
+    img {
+      width: 100%;
+    }
+    input {
+      margin: 0.4rem;
+    }
+  </style>
+</html>
